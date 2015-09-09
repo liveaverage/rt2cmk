@@ -1,0 +1,15 @@
+<?php
+
+# Settings
+# -----------------------------------------------------------------------------------------
+$cmk_user = 'automation_account';  // Use an automation account to access API functions -- this MUST be an automation account
+$cmk_pass = 'AKCMALDKLMNVCKALKAJAG';
+$cmk_url = 'http://cmk.yourdomain.com/omdsite/check_mk/'; // This  should be the base Check_MK URL
+$cmk_fld = 'DC'; //Your parent Check_MK folder (if applicable) containing row definitions
+$cmk_pre = 'RP'; //Rack name prefix (optional)
+$cmk_snmp = 'public'; //Default SNMP community to perform SNMP testing
+$cmk_debug = 1; // Set to 1 for raw JSON output
+$attribute_id = 3; // Use attribute id (string) as Check_MK hostname on API call. Attribute_ID 3 = FQDN
+# -----------------------------------------------------------------------------------------
+
+?>

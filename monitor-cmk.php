@@ -110,14 +110,6 @@ function renderCMK()
 
 	echo '</div>';
 
-	//CMK Raw curl/json output:
-	// if ($cmk_debug)
-	// {
-	// 	echo '<div class=portlet><h2>Debug</h2>'.$output;
-
-	// 	echo '<p>Location: '.getLocation($object).'</p></div>';
-	// }
-
 	if ( isset($_GET['remove']) && $exists )
 	{
 		//Delete host
@@ -220,7 +212,8 @@ function CMKadd($object, $target, $dest)
 
 	//Add new host
 	$loc = explode(':',preg_replace('/\s+/', '', getLocation($object)));
-	$dest = strtolower($cmk_fld.'/row_'.($loc[0]).'/'.$cmk_pre.'-'.($loc[1]));
+	//Formatting to particular tastes may be necessary
+	$dest = $cmk_fld.'/row_'.($loc[0]).'/'.$cmk_pre.'-'.strtoupper($loc[1]);
 
 	//Query for appropriate agent tag (Check_MK, SNMP, or Ping-only)
         $tag_agent = CMKagentcheck($target);

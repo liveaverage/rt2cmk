@@ -12,6 +12,11 @@ Standalone plugin to support one-click additions/removals/modifications of netwo
 Copy **monitor-cmk-conf.php.sample** and **monitor-cmk.php** to your RackTables plugin directory.
 Modify settings in **monitor-cmk-conf.php.sample** and rename to **monitor-cmk-conf.php**.
 
+## Configuration
+
+ * Configure your common SNMP Read-Only community name if you'd like to check for SNMP agent availability
+	* This is only used to confirm a device is accepting SNMP queries
+
 ## Usage
 
 An object's FQDN must be set (in RackTables) in order for the plugin tab to appear.
